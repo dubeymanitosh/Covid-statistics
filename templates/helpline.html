@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Helpline {% endblock %}
+{% block content %}
+<div class="container bg-light">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+        <table style="margin-left: auto;margin-right:auto;width:80%;margin-top:30px;" class="table table-responsive-sm text-center table-hover bg-light table-striped">
+          <tbody>
+            <tr>
+              <th class="bg-info"colspan="3" style="text-align: center; padding:10px 0; text-transform:uppercase; font-size:16px; line-height: 20px;">State Helpline Numbers</th>
+            </tr>
+            <tr>
+              <th>State/UT</th>
+              <th>Helpline No.</th>
+            </tr>
+            <tr>
+              <td>Andaman &amp; Nicobar</td>
+              <td>03192-232102</td>
+            </tr>
+            <tr>
+              <td>Andhra Pradesh</td>
+              <td>0866-2410978</td>
+            </tr>
+            <tr>
+              <td>Arunachal Pradesh</td>
+              <td>9436055743</td>
+            </tr>
+            <tr>
+              <td>Assam</td>
+              <td>6913347770</td>
+            </tr>
+            <tr>
+              <td>Bihar</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Chandigarh</td>
+              <td>9779558282</td>
+            </tr>
+            <tr>
+              <td>Chhattisgarh</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Dadra Nagar Haveli</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Delhi</td>
+              <td>011-22307145</td>
+            </tr>
+            <tr>
+              <td>Goa</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Gujarat</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Haryana</td>
+              <td>8558893911</td>
+            </tr>
+            <tr>
+              <td>Himachal Pradesh</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Jammu</td>
+              <td>01912520982</td>
+            </tr>
+            <tr>
+              <td>Jharkhand</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Karnataka</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Kashmir</td>
+              <td>01942440283</td>
+            </tr>
+            <tr>
+              <td>Kerala</td>
+              <td>0471-2552056</td>
+            </tr>
+            <tr>
+              <td>Ladakh</td>
+              <td>01982256462</td>
+            </tr>
+            <tr>
+              <td>Lakshadweep</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Madhya Pradesh</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Maharashtra</td>
+              <td>020-26127394</td>
+            </tr>
+            <tr>
+              <td>Manipur</td>
+              <td>3852411668</td>
+            </tr>
+            <tr>
+              <td>Meghalaya</td>
+              <td>108</td>
+            </tr>
+            <tr>
+              <td>Mizoram</td>
+              <td>102</td>
+            </tr>
+            <tr>
+              <td>Nagaland</td>
+              <td>7005539653</td>
+            </tr>
+            <tr>
+              <td>Odisha</td>
+              <td>9439994859</td>
+            </tr>
+            <tr>
+              <td>Puducherry</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Punjab</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Rajasthan</td>
+              <td>0141-2225624</td>
+            </tr>
+            <tr>
+              <td>Sikkim</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Tamil Nadu</td>
+              <td>044-29510500</td>
+            </tr>
+            <tr>
+              <td>Telangana</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Tripura</td>
+              <td>0381-2315879</td>
+            </tr>
+            <tr>
+              <td>Uttarakhand</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td>Uttar Pradesh</td>
+              <td>18001805145</td>
+            </tr>
+            <tr>
+              <td>West Bengal</td>
+              <td>1800313444222, 03323412600</td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align:center; padding: 10px 0; font-weight: 600;">The central helpline number: 011-23978046</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 col-sm-12">
+          {% include 'labs.html' %}
+          <h4 style="text-align:center;color:blue;"> I strongly recommend you to download Aarogya setu app to fight against Coronavirus </h4>
+          <center>
+            <a href="https://en.wikipedia.org/wiki/Aarogya_Setu" class="btn btn-primary" style="font-weight: 1.2em;font-size: 1.5em;text-decoration: none;">Know more about Aarogya setu app</a></center>
+            <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN">
+              <img src="{% static 'aarogya.jpeg' %}" style="width:100%;border:none;height:auto;">
+              <p style="text-align: center;text-decoration: none;">Download Aarogya setu app</p></a>
+
+            <h5 style="text-align:center;font-size:1.4em;color:blue;" > Here are links of some of the government institute websites monitoring coronavirus and providing different important instructions.You can visit there for more detailed instructions.</h5>
+            <br>
+            <ul style="list-style-type: none;">
+              <li>
+                <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" class="btn btn-primary btn-block redirect">World Health Organisation.</a>
+              </li>
+              <li>
+                <a href="https://www.mohfw.gov.in/" class="btn btn-primary btn-block redirect" >Ministry of health Affairs </a>
+              </li>
+
+              <li>
+                <a href="https://www.nih.gov/health-information/coronavirus" class="btn btn-primary btn-block redirect" >National Institute of Health</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019" class="btn btn-primary btn-block redirect" >Wikipedia</a>
+              </li>
+            </ul>
+            <div>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">During these times of high-stress and uncertainty amid the <a href="https://twitter.com/hashtag/COVID19?src=hash&amp;ref_src=twsrc%5Etfw">#COVID19</a> pandemic, it&#39;s important to look after yourself - and others. <br><br>Stay safe and stay positive. We are in this together -- and we will get through this together. <a href="https://t.co/3EHAHiVpp3">https://t.co/3EHAHiVpp3</a><br><br>🎨: Saprila Anindita <a href="https://t.co/H8qsUmxie3">pic.twitter.com/H8qsUmxie3</a></p>&mdash; United Nations (@UN) <a href="https://twitter.com/UN/status/1264134979723751425?ref_src=twsrc%5Etfw">May 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div>
+      </div>
+</div>
+{% endblock %}

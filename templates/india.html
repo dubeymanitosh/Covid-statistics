@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %} India {% endblock %}
+{% block content %}
+<div class="container-fluid p-lg-4 bg-light " >
+<div class="indian">
+<div style="margin-left: auto;">
+	<div class="case_in_india" style="margin-left: 0px;"> Confirmed <p style="color:blue;font-size: 1.5em;">{{indian_confirmed}}</p></div>
+	<div class="case_in_india"> Active <p style="color:orange;font-size: 1.5em;">{{indian_active}}</p> </div>
+	<div class="case_in_india"> Recovered <p style="color:green;font-size: 1.5em;">{{indian_recovered}}</p></div>
+	<div class="case_in_india" style="margin-right: 0px;" > Deaths <p style="color:red;font-size: 1.5em;">{{indian_deaths}}</p></div>
+</div>
+</div>
+	<div style="font-family: 'Karla', sans-serif;text-decoration:none;"id="detailed" class="col-lg-12 col-md-12 col-sm-12">
+    	<div class="accordion bg-dark" id="accordionExample">
+        	<div class="card">
+          		<div class="card-header" id="headingOne">
+              		<h2 class="mb-0">
+                		<button class="btn btn-link myth" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Note:</button>
+              		</h2>
+          		</div>
+          		<div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+              		<div style="font-size:1.3em;"class="card-body">
+                		Note:- Unfortunately the API that I used to build this application is not current being updating, hence this data is as of 13/08/2021.
+						Deeeply regret for this inconvenience.
+              		</div>
+          		</div>
+        	</div>
+      	</div>
+ 	</div>	
+<br><br>
+ 	<div class="row">
+		<div class="col-md-12 sol-sm-12 col-lg-6">
+		 	<table class="table table-hover table-responsive-sm bg-light table-striped">
+				<tr>
+					<th scope="col">State</th>
+					<th scope="col"> Confirmed</th>
+					<th scope="col"> Active</th>
+					<th scope="col">Recoverd</th>
+					<th scope="col">Death </th>
+				</tr>
+
+				{% for state in states %}
+				<tr>
+					{% for data in state %}
+						<td> {{data}}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="flourish-embed flourish-map" style="width:100%;border:0px;" data-src="visualisation/2019140" 
+		 	data-url="https://flo.uri.sh/visualisation/2019140/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+	    </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#about" onclick="closeNav()">About covid19</a>
+		<a href="#symptoms" onclick="closeNav()">Symptoms</a>
+		<a href="#preventions" onclick="closeNav()">Preventions</a>
+		<a href="#mythbusters" onclick="closeNav()">Mythbusters</a>
+		<a href="{% static 'faq.pdf' %}" onclick="closeNav()">Download FAQs</a> 
+		<a href="#youtube" onclick="closeNav()">Youtube gallery</a>
+</div>
+<div clss="container-fluid" style="padding:20px 10px;">
+	<span style="position:fixed;">&emsp; <span onclick="openNav()" id="floatbtn">&#9776;</span></span>
+	<p id="open"style="color:black;">"A time for patience, not patients"</p>
+<div class="container"  data-spy="scroll" id="about">
+	<div class="embed-responsive embed-responsive-21by9">
+		<iframe style="z-index:0;"width="956" height="538" src="https://www.youtube.com/embed/D9tTi-CDjDU" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe></iframe>
+	</div>
+
+	<div class="container" style="overflow:auto;font-family: 'Karla', sans-serif;">
+		<h3 style="font-size: 2.5em;font-weight: bold;"> About Covid19 Virus </h3>
+		<p style="font-family: 'Roboto', sans-serif;font-size: 1.3em;">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+		Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.<br>
+		The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. <br>
+		The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).<br>
+
+		At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.<br>
+	</p>
+	</div>
+</div>
+</div>
+<div class="container-fluid">
+	<div data-spy="scroll" id="symptoms" class="container">
+		<h2 style="font-size: 2.5em;font-weight: bold;"> Symptoms  </h2>
+			{% include 'symptoms.html' %}
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="container" style="margin-top:0px;font-family: 'Karla', sans-serif;" data-spy="scroll" id="preventions"><br>
+		<h2 style="font-size: 2.5em;font-weight: bold;"> Preventions  </h2>
+		{% include 'prevention.html' %}
+	</div>
+</div>
+<!-- <iframe style="position:relative;top:-100px;z-index:-1;"width="1024" height="576" src="https://app.developer.here.com/coronavirus/" frameborder="0"></iframe> -->
+
+<div class="container-fluid">
+	<div class="container" data-spy="scroll" id="mythbusters">
+		<h2 style="font-size: 2.5em;font-weight: bold;"> Myth Buster  </h2>
+		<h4>Fake news about coronavirus has became a second pandemic.
+		A lot of misinformation and hoax is spreading on social media platforms, following these fake news and wrong remedies can be harmful for you and your family..Here is some of the myth busters provided by WHO. </h4>
+		<br>{% include 'myth.html' %}
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="containere" style="width:100%;" data-spy="scroll" id="youtube">
+		<h2 style="font-size: 2.5em;font-weight: bold;">YouTube  </h2>
+		{% include 'youtube.html' %}
+	</div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  this.style.display="None";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  this.style.display="block";
+}
+</script>
+{% endblock %}
